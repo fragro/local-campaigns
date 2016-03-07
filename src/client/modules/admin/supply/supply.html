@@ -1,0 +1,46 @@
+<template name="supply_listing">
+    <h3>Current Supply</h3>
+    <hr>
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">Supply</h3>
+                <div class="pull-right">
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="#" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Item" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Quantity" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Size" disabled></th>
+                    </tr>
+                </thead>
+                <tbody>
+                	{{#each supply}}
+               			{{>supply_item}}
+               		{{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>
+
+<template name="supply_item">
+    <tr>
+    <td>{{#if $lte this.quantity 5}}
+        		{{#if $eq this.quantity 0}}
+					<i class="fa fa-times red"></i>
+				{{else}}
+					<i class="fa fa-exclamation-triangle yellow"></i>
+    			{{/if}}
+        	{{else}}
+        		<i class="fa fa-check green"></i>
+			{{/if}}
+        </td>
+        <td>{{this.item_id}}</td>
+        <td>{{this.quantity}}</td>
+        <td>{{this.size}}</td>
+    </tr>
+</template>

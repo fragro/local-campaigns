@@ -1,0 +1,50 @@
+<template name="create_user_form">
+	{{#if success}}
+		<div class="alert alert-success"><i class="fa fa-thumbs-up"></i> Success!</div>
+	{{/if}}
+	{{#if $.Session.get 'create-user'}}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-xs-12">
+				<form class="form-horizontal">
+				<fieldset>
+				<!-- Form Name -->
+				<legend>Create New User</legend>
+				<!-- Text input-->
+				<div class="control-group">
+				  <label class="control-label" for="username">Email</label>
+				  <div class="controls">
+				    <input id="username" name="username" type="email" placeholder="user@email.com" class="input-xlarge form-control">
+				    
+				  </div>
+				</div>
+				<!-- Select Basic -->
+				<div class="control-group">
+				  <label class="control-label" for="role">Role</label>
+				  <div class="controls">
+				    <select id="role" name="role" class="input-xlarge form-control">
+				      <option value="contributor">Contributor</option>
+				      <option value="shipper">Shipper</option>
+				      <option value="admin">Admin</option>
+				    </select>
+				  </div>
+				</div>
+				<!-- Button -->
+				<div class="control-group">
+				  <label class="control-label" for="add-user">Save</label>
+				  <div class="controls">
+				    <button id="cancel-user" name="add-user" class="btn btn-default">Cancel</button>
+				    <button id="add-user" name="add-user" class="btn btn-success pull-right">Confirm</button>
+				  </div>
+				</div>
+				{{#if err}}
+					<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> {{err}}</div>
+				{{/if}}
+				</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	{{/if}}
+
+</template>

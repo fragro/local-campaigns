@@ -1,0 +1,72 @@
+<template name="bio_main">
+    <!-- abilities-section start-->
+    <section id="ability" class="abilities-section">
+      <div class="container">
+        <div class="section-intro text-center">
+          <h2>{{dict 'bio.header'}}</h2>
+          <hr class="colored">
+          <p>{{dict 'bio.sub_header'}}</p>
+        </div>
+
+        <div class="abilities-tab" role="tabpanel">
+          <!-- Nav tabs -->
+          <ul id="abilitiesTab" class="nav nav-tabs nav-justified" role="tablist">
+            <li role="presentation"><a href="#tabOne" aria-controls="tabOne" role="tab" data-toggle="tab">{{dict 'bio.blurb_header_1'}}</a></li>
+            <li role="presentation" class="active"><a href="#tabTwo" aria-controls="tabTwo" role="tab" data-toggle="tab">{{dict 'bio.blurb_header_2'}}</a></li>
+            <li role="presentation"><a href="#tabThree" aria-controls="tabThree" role="tab" data-toggle="tab">{{dict 'bio.blurb_header_3'}}</a></li>
+            <li role="presentation"><a href="#tabFour" aria-controls="tabFour" role="tab" data-toggle="tab">{{dict 'bio.blurb_header_4'}}</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="tabOne">
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="img-responsive" src="{{dict 'bio.blurb_image_1.url'}}" alt="">
+                </div><!-- /.col-md-6 -->
+
+                <div class="col-md-6">
+                  <p>{{{dict 'bio.blurb_text_1'}}}</p>
+                </div><!-- /.col-md-6 -->
+              </div><!-- /.row -->
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="tabTwo">
+              <div class="row">
+
+                <div class="col-md-6 col-md-push-6">
+                  <img class="img-responsive" src="{{dict 'bio.blurb_image_2.url'}}" alt="">
+                </div><!-- /.col-md-6 -->
+
+                <div class="col-md-6 col-md-pull-6">
+                 <p>{{{dict 'bio.blurb_text_2'}}}</p>
+                </div><!-- /.col-md-6 -->
+              </div><!-- /.row -->
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tabThree">
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="img-responsive" src="{{dict 'bio.blurb_image_3.url'}}" alt="">
+                </div><!-- /.col-md-6 -->
+
+                <div class="col-md-6">
+                 <p>{{{dict 'bio.blurb_text_3'}}}</p>
+                </div><!-- /.col-md-6 -->
+              </div><!-- /.row -->
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tabFour">
+              <div class="row">
+                <div class="col-md-6 col-md-push-6">
+                  <img class="img-responsive" src="{{dict 'bio.blurb_image_4.url'}}" alt="">
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-6 col-md-pull-6">
+                 <p>{{{dict 'bio.blurb_text_4'}}}</p>
+                </div>
+              </div><!-- /.row -->
+            </div>
+          </div>
+        </div><!-- /.abilities-tab -->
+
+      </div>
+    </section>
+    <!-- abilities-section end-->
+</template>
+

@@ -1,0 +1,24 @@
+.admin-content {
+	display: block;
+	padding: 0.5em;
+	color: #333;
+	background: #f8f8f8;
+}
+.red {
+	color:#cd1e2f;
+}
+.green {
+	color:#00a12d;
+}
+.yellow {
+	color:#fef038;
+}
+.inventory {
+	font-size:2em;
+}
+body {
+	overflow-x: hidden; 
+}
+.volunteer-address{
+	margin-top: 26px;
+}

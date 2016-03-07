@@ -1,0 +1,48 @@
+<template name="spotlight">
+	<!-- spotlight-section start -->
+    <section class="spotlight-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <figure class="tt-effect">
+              <img src="{{ dict 'landing.election_image.url' }}" alt="Image">
+              <figcaption>
+                <h2>{{{ dict 'landing.election_header' }}}</h2>
+                <div class="content">
+                  <p> {{{ dict 'landing.election_learn_more' }}}</p>
+                  <a class="btn btn-default" href="{{ dict 'landing.election_link' }}">Learn more</a>
+                </div>
+              </figcaption>     
+            </figure>
+          </div><!-- /.col-md-4 -->
+
+          <div class="col-sm-6 col-md-4">
+            <figure class="tt-effect">
+              <img src="{{ dict 'landing.issues_image.url' }}" alt="Image">
+              <figcaption>
+                <h2>{{{ dict 'landing.issues_header' }}}</h2>
+                <div class="content">
+                  <p> {{{ dict 'landing.issues_learn_more' }}}</p>
+                  <a class="btn btn-default" href="{{ dict 'landing.issues_link' }}">Learn more</a>
+                </div>
+              </figcaption>     
+            </figure>
+          </div><!-- /.col-md-4 -->
+          <div class="col-sm-6 col-md-4">
+            <figure class="tt-effect">
+              <img src="{{ dict 'landing.donate_image.url' }}" alt="Image">
+              <figcaption>
+                <h2>{{{ dict 'landing.donate_header' }}}</h2>
+                <div class="content">
+                  <p> {{{ dict 'landing.donate_learn_more' }}}</p>
+                  <a class="btn btn-default" href="{{ dict 'landing.donate_link' }}">Learn more</a>
+                </div>
+              </figcaption>     
+            </figure>
+          </div><!-- /.col-md-4 -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+    <!-- spotlight-section end -->
+</template>

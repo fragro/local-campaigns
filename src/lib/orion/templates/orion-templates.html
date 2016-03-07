@@ -1,0 +1,59 @@
+<template name="backwards">
+	<div class="row feature backwards">
+		<div class="card">
+			<div class="card-content">
+		        <div class="card-body">
+					<div class="col-md-6 info">
+						{{{body}}}
+					</div>
+					{{#if image}}
+						<div class="col-md-6 image">
+							<img src="{{image.url}}" class="img-responsive img-thumbnail" alt="feature2" />
+							{{#if image_source}}
+								<p class="help text-muted pull-right">
+									<i class="fa fa-info"></i> <a href="{{image_source}}"> Source</a>
+								</p>
+							{{/if}}
+						</div>
+					{{/if}}
+				</div>
+			</div>		
+		</div>
+	</div>
+</template>
+<template name="forwards">
+	<div class="row feature">
+		<div class="card">
+			<div class="card-content">
+		        <div class="card-body">
+					<div class="col-md-6 info">
+						{{{body}}}
+					</div>
+					{{#if image}}
+						<div class="col-md-6 image">
+							<img src="{{image.url}}" class="img-responsive img-thumbnail" alt="feature2" />
+							{{#if image_source}}
+								<p class="help text-muted pull-right">
+									<i class="fa fa-info"></i> <a href="{{image_source}}"> Source</a>
+								</p>
+							{{/if}}
+						</div>
+					{{/if}}
+				</div>
+			</div>		
+		</div>
+	</div>
+</template>
+<template name="call_to_action">
+	<div class="row header">
+		<div class="card">
+			<div class="card-content">
+		        <div class="card-body">
+					<div class="col-md-12">
+						{{{body}}}
+					</div>
+				</div>
+   			 </div>
+		</div>
+	</div>
+</template>

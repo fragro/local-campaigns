@@ -1,0 +1,132 @@
+<template name="admin">
+
+	{{#if currentUser}}
+		{{#if isInRole 'organizer'}}
+			{{>organizer_info_dashboard}}
+		{{/if}}
+		{{#if isInRole 'admin'}}
+			{{>admin_portal}}
+		{{/if}}
+	{{else}}
+		{{>login}}
+	{{/if}}
+
+</template>
+
+<template name="admin_portal">
+
+	<div class="container">
+
+		<div class="row admin-content">
+			<div class="col-md-2 col-sm-3 hidden-xs">
+				{{>admin_nav}}
+			</div>
+			{{#if empty_session}}
+				<div class="visible-xs text-center">
+					<div class="col-xs-12">
+						<h2>{{>admin_nav}}</h2>
+					</div>
+				</div>
+			{{/if}}
+			<div class="col-md-9 col-sm-9 col-xs-10 col-xs-offset-1">
+				{{#if isInRole 'admin'}}
+					{{#if $.Session.equals 'admin-view' 'orders'}}
+						{{>order_listing}}	
+					{{/if}}
+					{{#if $.Session.equals 'admin-view' 'complete'}}
+						{{>complete_order_listing}}	
+					{{/if}}
+					{{#if $.Session.equals 'admin-view' 'supply'}}
+						{{>supply_listing}}	
+					{{/if}}
+					{{#if $.Session.equals 'admin-view' 'add-supply'}}
+						{{>supply_form}}	
+					{{/if}}
+					{{#if $.Session.equals 'admin-view' 'events'}}
+						{{>event_form}}	
+					{{/if}}
+					{{#if $.Session.equals 'admin-view' 'home'}}
+						{{>admin_info_dashboard}}
+					{{/if}}
+					<div class="hidden-xs">
+						{{#if empty_session}}
+							{{>admin_info_dashboard}}
+						{{/if}}
+					</div>
+				{{/if}}
+			</div>
+		</div>
+
+	</div>
+	<hr>
+</template>
+
+<template name="admin_nav">
+	<ul class="nav nav-pills nav-stacked">
+		<h4>Admin</h4>
+	    <li><a href="#" data-action="set-view" data-id="home"><i class="fa fa-home fa-fw"></i> Home</a></li>
+	    <li><a href="#" data-action="set-view" data-id="orders"><i class="fa fa-exclamation fa-fw"></i> Orders</a></li>
+	    <li><a href="#" data-action="set-view" data-id="complete"><i class="fa fa-list-alt fa-fw"></i> Complete</a></li>
+	    <li><a href="#" data-action="set-view" data-id="supply"><i class="fa fa-eye fa-fw"></i> Supply</a></li>
+	    <li><a href="#" data-action="set-view" data-id="add-supply"><i class="fa fa-plus fa-fw"></i> Supply</a></li>
+	    <li><a href="#" data-action="set-view" data-id="events"><i class="fa fa-bullhorn fa-fw"></i> Events</a></li>
+		<h4>Organizer</h4>
+	    <li><a href="/organizer/volunteer-management"><i class="fa fa-user fa-fw"></i> Volunteers</a></li>
+	    <li><a href="/organizer/petition-locator"><i class="fa fa-map-marker fa-fw"></i> Map</a></li>
+    	<li><a href="http://23.23.208.129:33100/" target="blank"><i class="fa fa-envelope fa-fw"></i> Webmail</a></li>
+	</ul>
+</template>
+<template name="admin_info_dashboard">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 col-xs-12">
+			<img src="/images/okforhealthalt-transparent.png" class="img-responsive">
+		</div>
+		<div class="col-md-6 div-xs-12 text-center">
+			<h2 class="text-muted">Closed Orders</h2>
+			<h2>{{open_orders}}</h2>
+		</div>
+		<div class="col-md-6 div-xs-12 text-center">
+			<h2 class="text-muted">Volume</h2>
+			<h2><i class="fa fa-dollar"></i> {{volume}}</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 div-xs-12 text-center">
+			<h2 class="text-muted">Supply</h2>
+			<h2>{{supply}}</h2>
+		</div>
+		<div class="col-md-4 div-xs-12 text-center">
+			<h2 class="text-muted">Users</h2>
+			<h2><i class="fa fa-users"></i> {{users}} 
+				{{#if $.Session.get 'create-user'}}{{else}}<a href="#" data-action="create-user"><i class="fa fa-plus green"></i></a>{{/if}}
+			</h2>
+		</div>
+		<div class="col-md-4 div-xs-12 text-center">
+			<h2 class="text-muted">Emails</h2>
+			<h2><a href="#" data-action="activate-email" class="btn btn-info"><i class="fa fa-envelope-o"></i> Get Emails</a></h2>
+		</div>
+	</div>
+	{{>create_user_form}}
+	{{#if $.Session.get 'grabbing-emails'}}
+		{{>email_view}}
+	{{/if}}
+
+</template>
+<template name="admin_view_plus">
+	{{#if go_back}}
+		<span data-action="go-back"><i class="fa fa-caret-left"></i> Go Back</span>
+	{{else}}
+		<span data-action="go-home"><i class="fa fa-plus"></i> OK4Health</span>
+	{{/if}}
+</template>
+<template name="email_view">
+	{{#if email_data}}
+		<textarea>{{email_data}}</textarea>
+		<p class="help-block"><i class="fa fa-info"></i> Click the box with the data, select all, and copy into your email client's <strong>BCC</strong> field.</p>
+	{{else}}
+		<i class="fa fa-spin fa-spinner"></i>
+	{{/if}}
+	<div>
+		<a href="#" class="btn btn-default btn-raised" data-action="cancel-email-grab">Cancel</a>
+	</div>	
+</template>

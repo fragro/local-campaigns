@@ -1,0 +1,36 @@
+<template name="campaign_timeline">
+ <!-- story-section start-->
+    <section id="campaign" class="story-section">
+      <div class="container">
+        <div class="section-intro text-center">
+          <h2>{{{ dict 'campaign_timeline.header' }}}</h2>
+          <hr class="colored">
+          {{{ dict 'campaign_timeline.sub_header' }}}
+        </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <ul class="timeline">
+                  	{{#each timeline}}
+	                      <li class="{{template}}">
+	                          <div class="posted-date">
+	                              <span class="month">{{date}}</span>
+	                          </div><!-- /posted-date -->
+	                          <div class="timeline-panel">
+	                              <div class="timeline-content">
+	                                  <div class="timeline-heading">
+	                                      <h3><a href="#">{{title}}</a></h3>
+	                                  </div><!-- /timeline-heading -->
+	                                  <div class="timeline-body">
+	                                      {{{body}}}
+	                                  </div><!-- /timeline-body -->
+	                              </div> <!-- /timeline-content -->
+	                          </div><!-- /timeline-panel -->
+	                      </li>
+                  	{{/each}}
+                  </ul>
+              </div>
+          </div><!-- /row -->
+      </div>
+    </section>
+    <!-- story-section end-->
+</template>

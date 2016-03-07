@@ -1,0 +1,59 @@
+<template name="supply_form">
+    <h3>Add Supply</h3>
+    {{#if error}}
+    <div class="alert alert-warning"><i class="fa fa-exclamation-triangle"></i> {{error}}</div>
+    {{/if}}
+    <hr>
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-plus"></i> Supply</h3>
+                <div class="pull-right">
+                </div>
+            </div>
+            <form class="form-horizontal row" style="margin-left:20px; margin-bottom:20px;">
+				<fieldset>
+
+				<!-- Select Basic -->
+				<div class="control-group col-md-2 col-xs-12 text-center">
+				  <label class="control-label" for="selectbasic">Item ID</label>
+				  <div class="controls">
+				    <select id="item-id" name="selectbasic" class="form-control input-xlarge">
+				    	{{#each id_choices}}
+					      <option>{{this}}</option>
+					    {{/each}}
+				    </select>
+				  </div>
+				</div>
+
+				<!-- Text input-->
+				<div class="control-group col-md-3 col-xs-12 text-center">
+				  <label class="control-label" for="Quantity">Quantity</label>
+				  <div class="controls">
+				    <input id="quantity" name="Quantity" type="text" placeholder="100" class="form-control input-xlarge">
+			
+				  </div>
+				</div>
+				<!-- Select Basic -->
+				<div class="control-group col-md-2 col-xs-12 text-center">
+				  <label class="control-label" for="Size">Size</label>
+				  <div class="controls">
+				    <select id="size" name="Size" class="form-control input-xlarge">
+				    	{{#each size_choices}}
+				      		<option>{{this}}</option>
+				    	{{/each}}
+				    </select>
+				  </div>
+				</div>
+				<!-- Button -->
+				<div class="control-group col-md-2 col-xs-12 text-center">
+				  <label class="control-label"></label>
+				  <div class="controls">
+				    <span data-action="add-supply" class="btn btn-primary">Submit</span>
+				  </div>
+				</div>	
+			</fieldset>
+			</form>
+        </div>
+    </div>
+</template>

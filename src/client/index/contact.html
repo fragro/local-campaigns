@@ -1,0 +1,43 @@
+<template name="contact_main">
+  	<div class="container"> 
+		<div class="row">
+			<div class="col-md-12 col-xs-12">
+				<div class="contact-container">
+					{{> contactForm }}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="customContactSuccessTemplate">
+ <!-- about-section start -->
+    <section id="about" class="about-section">
+      <div class="container">
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="profile-overview">
+                <h3>{{dict 'contact.success_header'}}</h3>
+                {{{dict 'contact.success_text'}}}
+                <div class="social-links">
+              		<ul class="list-inline">
+			            <li><a href="{{dict 'site.facebook_url'}}"><i class="fa fa-facebook"></i></a></li>
+			            <li><a href="{{dict 'site.twitter_url'}}"><i class="fa fa-twitter"></i></a></li>
+			            <li><a href="{{dict 'site.googleplus_url'}}"><i class="fa fa-google-plus"></i></a></li>
+			            <li><a href="{{dict 'site.linkedin_url'}}"><i class="fa fa-linkedin"></i></a></li>
+                  	</ul>
+                </div>
+
+              </div><!-- /.profile-overview -->
+            </div><!-- /.col-md-6 -->
+            <div class="col-md-6">
+              <div class="video-wrap">
+                  <img src="{{dict 'contact.success_image.url'}}">
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!-- about-section end -->
+</template>

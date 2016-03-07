@@ -1,0 +1,13 @@
+.plus-button, .minus-button, .first-button, .last-button {
+	margin-left:5px;
+	margin-right: 5px;
+	background-color: #03a9f4;
+	color: rgba(255, 255, 255, 0.84);
+	padding: 5px 20px;
+}
+.page-button, .change-page {
+  font-family: "RobotoDraft", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  cursor:pointer;
+}

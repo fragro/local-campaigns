@@ -1,0 +1,57 @@
+<template name="campaign">
+
+    <!-- campaign-section start -->
+    <section id="event" class="campaign-section">
+      <div class="container">
+        <div class="section-intro text-center">
+          <h2>Election 2016</h2>
+          <hr class="colored">
+          <p>{{{ dict 'landing.election_primary_text' }}}</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-sm-12 col-md-6">
+            <div class="upcoming-campaign">
+              <img src="/images/campaign/countdown-bg.jpg" class="img-responsive" alt="Image">
+              <div class="campaign-scoop">
+                <span class="title">Get Registered to Vote Now</span>
+                <span class="start-date">Primary Coming on <span class="colored">28 Jun 2016</span></span>
+
+                <div class="countdown-wrapper">
+                    <ul id="countdown">
+                        <li>
+                            <span class="days">00</span>
+                            <p>days</p>
+                        </li>
+                        <li>
+                            <span class="hours">00</span>
+                            <p>hours </p>
+                        </li>
+                        <li>
+                            <span class="minutes">00</span>
+                            <p>minutes</p>
+                        </li>
+                        <li>
+                            <span class="seconds">00</span>
+                            <p>seconds</p>
+                        </li>               
+                    </ul><!-- /countdown -->
+                </div>
+               <!--  <address>
+                  New York, 123546 Brown Street USA
+                </address>
+                <span class="event-duration colored">8:00 am - 5:00 pm</span> -->
+              </div><!-- /.campaign-scoop -->
+            </div><!-- /.upcoming-campaign -->
+          </div><!-- /.col-md-6 -->
+
+        {{>landing_events}}
+
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+    </section>
+    <!-- campaign-section end -->
+
+</template>

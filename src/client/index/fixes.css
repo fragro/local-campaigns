@@ -1,0 +1,25 @@
+.at-form {
+	width:90%;
+	overflow-x:hidden;
+}
+.donation-form-padding {
+	padding-top: 90px;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.carousel-indicators li{
+	width:30px;
+	height:30px;
+}
+.carousel-indicators li, .carousel-indicators .active{
+	margin:30px;
+}
+.contact-container{
+	margin-top:100px;
+	margin-bottom:55px;
+}
+input.form-control {
+	background-color: white;
+}

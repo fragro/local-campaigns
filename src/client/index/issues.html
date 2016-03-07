@@ -1,0 +1,100 @@
+<template name="issues_in_depth">
+ <!-- about-section start -->
+    <section id="about" class="about-section">
+      <div class="container">
+          <div class="section-intro ">
+            <h2>{{{ dict 'landing.call_to_action' }}}</h2>
+            <hr class="colored">
+            {{{ dict 'landing.call_to_action_sub' }}}
+          </div>
+          {{#each issues}}
+            {{>Template.dynamic template=template}}
+          {{/each}}
+      </div>
+    </section>
+    <!-- donation-section end -->
+</template>
+<template name="issues_left">
+   <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <div class="profile-overview">
+        <h1>{{title}}</h1>
+        {{{ body }}}
+      </div><!-- /.profile-overview -->
+    </div><!-- /.col-md-6 -->
+    <div class="col-md-6 col-xs-12">
+      <div class="donation-form-padding">
+          <img src="{{image.url}}" class="img-responsive">
+      </div>
+    </div>
+  </div>
+</template>
+<template name="issues_right">
+   <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <div class="donation-form-padding">
+          <img src="{{image.url}}" class="img-responsive">
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <div class="profile-overview">
+        <h1>{{title}}</h1>
+        {{{ body }}}
+      </div><!-- /.profile-overview -->
+    </div><!-- /.col-md-6 -->
+  </div>
+</template>
+<template name="landing_issues">
+   <!-- mission-section start -->
+    <section id="issues" class="mission-section">
+      <div class="container">
+        <div class="section-intro text-center">
+          <h2>Ron Marlett on the Issues</h2>
+          <hr class="colored">
+          <p>{{{ dict 'issues.issues_primary_text' }}}</p>
+        </div>
+
+        <div class="row mb-50">
+          <div class="col-sm-4">
+            <div class="mission-promo clearfix">
+              <h3 class=""><i class="fa fa-legal"></i> Criminal Justice Reform</h3>
+              <p>{{{ dict 'issues.cjr_primary' }}}</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="mission-promo clearfix">
+              <h3 class=""><i class="fa fa-line-chart"></i> Economy</h3>
+              <p>{{{ dict 'issues.econ_primary' }}}</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="mission-promo clearfix">
+              <h3 class=""><i class="fa fa-book"></i> Education</h3>
+              <p>{{{ dict 'issues.edu_primary' }}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-2">
+            <div class="mission-promo clearfix ">
+              <h3 class=""><i class="fa fa-heartbeat"></i> Healthcare</h3>
+              <p>{{{ dict 'issues.health_primary' }}}</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="mission-promo clearfix ">
+              <h3 class=""><i class="fa fa-university"></i> Role of Government</h3>
+              <p>{{{ dict 'issues.role_of_gov_primary' }}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-12 col-xs-12 ">
+              <a class="btn btn-primary btn-lg" href="/issues">Learn More</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+</template>

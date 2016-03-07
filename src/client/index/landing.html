@@ -1,0 +1,26 @@
+<template name="landing">
+	<head>
+		<meta property="og:title" content="Ron Marlett for House District 84" />
+		<meta property="og:site_name" content="Ron Marlett for House District 84"/>
+		<meta property="og:url" content="http://www.voteronmarlett.com" />
+		<meta property="og:description" content="Life-long Oklahoman. Family man. Clinical Social Worker. Lover of Liberty, Equality and Opportunity. Candidate for State Representative, House District 84." />
+		<meta property="og:image" content="https://s3.amazonaws.com/marlett/cover.jpg" />
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	</head>
+
+   <section id="home" class="home-section tt-fullHeight">
+      <div class="intro">
+        <span class="intro-sub">{{{ dict 'landing.header' }}}</span>
+        <hr class="colored">
+        <h1>{{{ dict 'landing.sub_header' }}}</h1>
+      </div>
+    </section>
+ 	{{>landing_issues}}
+<!--  	<div id="testimonials">
+   		{{>testimonials}}
+ 	</div> -->
+   	{{>campaign_timeline}}
+   	{{>donate}}
+ 	  {{>events_main}}
+    {{>spotlight}}
+</template>

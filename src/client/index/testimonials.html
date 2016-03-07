@@ -1,0 +1,36 @@
+<template name="testimonials">
+    <!-- testimonial-section start-->
+    <section class="testimonial-section"  data-stellar-background-ratio="0.5">
+      <div class="testimonial-overlay">
+        <div class="container">
+          <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" style="bottom: -25%;">
+         			{{#each testimonial_items}}
+                 <li data-target="#testimonialCarousel" data-slide-to="{{order}}" class="{{#if $eq order 0}}active{{/if}}"></li>
+        			{{/each}}	
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+        			{{#each testimonial_items}}
+        				{{> Template.dynamic template=template }}
+        			{{/each}}	
+            </div>
+          </div><!-- /.carousel -->
+        </div><!-- /.container -->
+      </div>
+    </section>
+</template>
+<template name="testimonial_a">
+	<div class="item {{#if $eq order 0}}active{{/if}}">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<blockquote>
+					<i class="fa fa-quote-left"></i>
+					{{{body}}}
+					<footer>{{{name}}}, <cite title="Source Title">{{location}}</cite></footer>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</template>
