@@ -2,6 +2,7 @@
 
 For local development and testing:
 
+	cd marlett/src
 	meteor --settings ../settings.json
 
 If you want to run with the production data locally use the folowing command, but tread with caution:
