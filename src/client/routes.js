@@ -79,12 +79,19 @@ FlowRouter.route('/biography', {
         prepMaterial();
     }
 });
-
 FlowRouter.route('/contact', {
     action: function(params) {
         BlazeLayout.render('main_layout', { top: "normal_header", main: "contact_main", footer: "footer" });
         mainMeta("Contact Ron Marlett", '/contact');
         Session.set('view', 'contact');
+        prepMaterial();
+    }
+});
+FlowRouter.route('/petition', {
+    action: function(params) {
+        BlazeLayout.render('main_layout', { top: "normal_header", main: "petition_main", footer: "footer" });
+        mainMeta("Info for Ron Marlett", '/petition');
+        Session.set('view', 'petition');
         prepMaterial();
     }
 });
