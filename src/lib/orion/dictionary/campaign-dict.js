@@ -12,3 +12,7 @@ orion.dictionary.addDefinition('event_main_text', 'campaign_timeline',
       label: 'Campaign 2016 Event Description',
       optional: true
 }));
+orion.dictionary.addDefinition('id', 'petition', {
+  type: String,
+  label: 'Current Petition ID'
+});
