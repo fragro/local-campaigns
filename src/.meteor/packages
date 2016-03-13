@@ -6,7 +6,6 @@
 
 fortawesome:fontawesome
 jquery
-twbs:bootstrap
 fourseven:scss
 accounts-ui
 accounts-password
