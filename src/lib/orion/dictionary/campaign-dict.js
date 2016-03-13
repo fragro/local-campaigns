@@ -16,3 +16,8 @@ orion.dictionary.addDefinition('id', 'petition', {
   type: String,
   label: 'Current Petition ID'
 });
+orion.dictionary.addDefinition('call_to_action', 'petition',  
+  orion.attribute('summernote', {
+      label: 'Petition Call to Action',
+      optional: true
+}));

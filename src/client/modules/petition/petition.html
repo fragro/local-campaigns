@@ -1,8 +1,15 @@
 <template name="petition_main">
     <!-- donation-section start -->
+    <div class="container">
+
     <section class="donation-section">
+	    <div class="row donation-form-padding">
+	    	<div class="col-md-10 col-md-offset-1 col-xs-12">
+	    		{{{dict 'petition.call_to_action'}}}
+	    	</div>
+	    </div>
         <div class="row">
-			<div class="col-md-12 col-xs-12 donation-form-padding">
+			<div class="col-md-12 col-xs-12">
 				<script type="text/javascript" src="//d1aqhv4sn5kxtx.cloudfront.net/actiontag/at.js"></script>
 			  <div class="ngp-form" data-id="-7598152444624697344"></div>
 			  <style>.quinary {
@@ -12,12 +19,12 @@
 .at-inner {
 	background:none #21409a !important;
 	border-radius: 5px 5px 5px 5px !important;
--moz-border-radius: 5px 5px 5px 5px !important;
--webkit-border-radius: 5px 5px 5px 5px !important;
-border: 0px solid #000000;
-display:block;
-padding:10px 15px;
-margin:80px auto 200px;
+	-moz-border-radius: 5px 5px 5px 5px !important;
+	-webkit-border-radius: 5px 5px 5px 5px !important;
+	border: 0px solid #000000;
+	display:block;
+	padding:10px 15px;
+	margin:80px auto 200px;
 }
 .header_wrapper {
 	border-bottom:1px solid #d7d7d7;
@@ -36,7 +43,7 @@ margin:80px auto 200px;
 }
 .at .HeaderHtml {
     padding: 1.25rem 0;
-	/*display:none !important;*/
+	display:none !important;
 	background: #21409a;
 	color:white;
 	font-weight:bold;
@@ -46,7 +53,7 @@ margin:80px auto 200px;
 }
 .at .FooterHtml {
     padding: 1.25rem 0;
-	/*display:none !important;*/
+	display:none !important;
 }
 header.at-title {
 	color: #fdfdff !important; /* text color */
@@ -55,14 +62,14 @@ header.at-title {
 	text-align:center;
 	text-transform:uppercase;
 	margin:0;
-	/*background:none #be202e;*/
+	background:none #be202e;
 	padding: 5px 0;
 	border:0 !important;
 }
 
 .grammarly-disable-indicator {
 	font-size: 1.125rem;
-	/*display:none !important;*/
+	display:none !important;
 }
 .at fieldset legend {
     border: 0 none;
@@ -72,7 +79,7 @@ header.at-title {
     font-weight: 400;
     padding-bottom: 0;
     padding-top: 24px;
-	/*display:none !important;*/
+	display:none !important;
 }
 .section_logo {
 	display:block;
@@ -392,5 +399,7 @@ label.at-text.LastName {
 </style>
 			</div>
 		</div>
+
 	</section>
+    </div>
 </template>
