@@ -1,6 +1,5 @@
 <template name="petition_main">
-    <!-- donation-section start -->
-   <!-- donation-section start -->
+<!-- donation-section start -->
 
 <div class="header_wrapper">
   <div class="container-fluid">
@@ -47,6 +46,32 @@
   </div>
 </div>
 <style>
+/* font-family: 'signpaintermedium'; */
+
+@font-face {
+    font-family: 'signpaintermedium';
+    src: url('fonts/signpainter/signpainter-housescript-webfont.eot');
+    src: url('fonts/signpainter/signpainter-housescript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/signpainter/signpainter-housescript-webfont.woff2') format('woff2'),
+         url('fonts/signpainter/signpainter-housescript-webfont.woff') format('woff'),
+         url('fonts/signpainter/signpainter-housescript-webfont.ttf') format('truetype'),
+         url('fonts/signpainter/signpainter-housescript-webfont.svg#signpaintermedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('fonts/gotham/fonts/GothamBook.eot');
+    src: url('fonts/gotham/fonts/GothamBook.eot') format('embedded-opentype'),
+         url('fonts/gotham/fonts/GothamBook.woff2') format('woff2'),
+         url('fonts/gotham/fonts/GothamBook.woff') format('woff'),
+         url('fonts/gotham/fonts/GothamBook.ttf') format('truetype'),
+         url('fonts/gotham/fonts/GothamBook.svg#GothamBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html.overlay-open .navbar-fixed-top {
 	z-index:400
 }
@@ -114,7 +139,7 @@ body #admin-menu .dropdown li {
 }
 @media screen and (min-width:768px) {
 .navbar.container {
-max-width:720px;
+max-width:720px
 }
 }
 @media screen and (min-width:992px) {
@@ -1305,10 +1330,10 @@ padding:15px 11px;
 html {
 }
 body {
-	font-family:'Open Sans', sans-serif;
+	font-family:'GothamBook';
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family:'Open Sans', sans-serif;
+	font-family:'GothamBook';
 	font-weight:400;
 	margin-top:0;
 	text-transform:uppercase;
@@ -1338,7 +1363,7 @@ div.navigation {
 	z-index:222;
 }
 .navbar-nav>li>a {
-	font-family:'Open Sans', sans-serif;
+	font-family:'GothamBook';
 	font-weight:700;
 	text-transform:uppercase;
 }
@@ -2073,4 +2098,5 @@ text-align:center;
 }
 
 </style>
+
 </template>
