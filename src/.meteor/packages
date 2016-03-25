@@ -18,7 +18,6 @@ reactive-var
 email
 natestrauser:animate-css
 spiderable
-yasinuslu:blaze-meta
 edgee:slingshot
 miguelalarcos:flow-router-pagination
 tmeasday:publish-counts
@@ -55,3 +54,4 @@ nicolaslopezj:orion-ga
 tomwasd:history-polyfill
 less
 fragro:contactform
+yasinuslu:blaze-meta

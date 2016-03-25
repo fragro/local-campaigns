@@ -98,9 +98,10 @@ FlowRouter.route('/petition', {
 FlowRouter.route('/eric-striker', {
     action: function(params) {
         BlazeLayout.render('main_layout', { top: "normal_header", main: "eric_striker", footer: "footer" });
-        mainMeta("Erik Striker Meet and Greet", '/eric-striker');
-        Meta.set("og:image", "https://s3.amazonaws.com/marlett/meet-greet-eric-striker.jpg");
-        Meta.set("og:description", "Come meet and greet Eric Striker, OU Linebacker, Political Scientist, and Community Leader");
+        fullMeta("Erik Striker Meet and Greet",
+                 '/eric-striker', 
+                 "Come meet and greet Eric Striker, OU Linebacker, Political Scientist, and Community Leader",
+                 "https://s3.amazonaws.com/marlett/meet-greet-eric-striker.jpg" )
         Session.set('view', 'striker');
         prepMaterial();
     }
