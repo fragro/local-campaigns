@@ -100,7 +100,7 @@ FlowRouter.route('/eric-striker', {
         BlazeLayout.render('main_layout', { top: "normal_header", main: "eric_striker", footer: "footer" });
         fullMeta("Erik Striker Meet and Greet",
                  '/eric-striker', 
-                 "Come meet and greet Eric Striker, OU Linebacker, Political Scientist, and Community Leader",
+                 "Come meet and greet Eric Striker April 1st in OKC. OU Linebacker, Political Scientist, and Community Leader",
                  "https://s3.amazonaws.com/marlett/meet-greet-eric-striker.jpg" )
         Session.set('view', 'striker');
         prepMaterial();
