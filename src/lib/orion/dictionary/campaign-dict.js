@@ -21,3 +21,7 @@ orion.dictionary.addDefinition('call_to_action', 'petition',
       label: 'Petition Call to Action',
       optional: true
 }));
+orion.dictionary.addDefinition('title', 'petition', {
+  type: String,
+  label: 'Petition Title'
+});
