@@ -20,12 +20,6 @@ mainMeta = function(title, url){
 	  content: "http://www.voteronmarlett.com" + url
 	});
     Session.set("meta-title", title);
-	if(title){
-		document.title = title; 
-	}
-	else{
-		document.title = 'Ron Marlett for HD84';	
-	}
 }
 Meteor.autorun(function () {
 	var title = Session.get("meta-title");
@@ -58,4 +52,5 @@ fullMeta = function(title, url, desc, img){
 	  property: 'og:url',
 	  content: "http://www.voteronmarlett.com" + url
 	});
+    Session.set("meta-title", title);
 }
