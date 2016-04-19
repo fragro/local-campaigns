@@ -10,9 +10,9 @@ RUN curl https://install.meteor.com/ | sh
 
 ENV HOME /root
 #SSL
-ADD ssl/fullchain.pem /etc/nginx/cert/fullchain.pem
-ADD ssl/privkey.pem /etc/nginx/cert/privkey.pem
-ADD ssl/dhparam.pem /etc/nginx/cert/dhparam.pem
+ADD ssl/v2/fullchain.pem /etc/nginx/cert/fullchain.pem
+ADD ssl/v2/privkey.pem /etc/nginx/cert/privkey.pem
+ADD ssl/v2/dhparam.pem /etc/nginx/cert/dhparam.pem
 
 #bundle meteor app
 ADD src /src
